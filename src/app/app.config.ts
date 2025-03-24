@@ -5,7 +5,6 @@ import { providePrimeNG } from 'primeng/config';
 import MyPreset from '../../public/assets/myPreset';
 
 import { routes } from './app.routes';
-import { useTheme } from '@primeng/themes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,7 +15,7 @@ export const appConfig: ApplicationConfig = {
             theme: {
                 preset: MyPreset,
                 options: {
-                  darkModeSelector: false || 'none'
+                  darkModeSelector: false
               }
             },
             ripple: true

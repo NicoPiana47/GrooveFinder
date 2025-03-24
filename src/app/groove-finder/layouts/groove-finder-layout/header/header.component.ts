@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-header',
-  imports: [MenubarModule],
+  imports: [MenubarModule, ButtonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {
   protected menuItems: MenuItem[] = [];
 
-  
   ngOnInit() {
     this.menuItems = [
       {

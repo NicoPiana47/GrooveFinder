@@ -2,9 +2,10 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Lara from '@primeng/themes/lara';
+import MyPreset from '../../public/assets/myPreset';
 
 import { routes } from './app.routes';
+import { useTheme } from '@primeng/themes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -13,7 +14,10 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
         providePrimeNG({
             theme: {
-                preset: Lara
+                preset: MyPreset,
+                options: {
+                  darkModeSelector: false || 'none'
+              }
             },
             ripple: true
         })

@@ -5,14 +5,8 @@ const MyPreset = definePreset(Lara, {
     semantic: {
         colorScheme: {
             light: {
-                surface: {
-                    0: '#ffffff'
-                },
-                text: {
-                    color: '#000000'
-                },
                 primary: {
-                    color: '#20EDA9', 
+                    color: '#20EDA9',
                     hoverColor: '#1ACF90',
                     activeColor: '#14B178',
                     inverseColor: '#ffffff'
@@ -21,11 +15,22 @@ const MyPreset = definePreset(Lara, {
                     background: '#20EDA9',
                     focusBackground: '#1ACF90',
                     color: '#ffffff',
-                    focusColor: '#ffffff'
+                    focusColor: '#ffffff',
                 },
-                formField: {
-                    hoverBorderColor: '#ffffff'
-                }
+            },
+            dark: {
+              primary: {
+                color: '#20EDA9',
+                hoverColor: '#1ACF90',
+                activeColor: '#14B178',
+                inverseColor: '#000000'
+              },
+              highlight: {
+                  background: '#20EDA9',
+                  focusBackground: '#1ACF90',
+                  color: '#000000',
+                  focusColor: '#000000'
+              },
             }
         },
     }

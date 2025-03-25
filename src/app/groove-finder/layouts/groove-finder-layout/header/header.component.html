@@ -7,10 +7,32 @@
         </a>
     </ng-template>
 
-    <!-- <div class="flex items-center gap-2">
-        <input type="text" pInputText placeholder="Buscar Groove" class="w-36" />
-    </div>
-     -->
 
-     
+
+  <ng-template #end>
+    <div class="flex">
+      <p-button
+        styleClass="p-button-rounded p-button-text"
+        (onClick)="toggleTheme()"
+      >
+        <ng-container *ngIf="darkMode; else lightIcon">
+          <i class="pi pi-sun" style="font-size: 1.5rem; color: var(--yellow-500);"></i>
+        </ng-container>
+
+        <ng-template #lightIcon>
+          <i class="pi pi-moon" style="font-size: 1.5rem; color: var(--blue-700);"></i>
+        </ng-template>
+      </p-button>
+
+      <p-input-group>
+        <p-inputgroup-addon>
+            <i class="pi pi-search"></i>
+        </p-inputgroup-addon>
+        <input type="text" pInputText placeholder="Buscar Groove" class="w-36" />
+      </p-input-group>
+    </div>
+
+  </ng-template>
+
+
 </p-menubar>
